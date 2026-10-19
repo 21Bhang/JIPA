@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function() {
+        try {
+          var _origFetch = window.fetch;
+          var defineFetch = function(target) {
+            try {
+              Object.defineProperty(target, 'fetch', {
+                configurable: true,
+                enumerable: true,
+                get: function() {
+                  return _origFetch;
+                },
+                set: function(val) {
+                  _origFetch = val;
+                }
+              });
+            } catch (e) {}
+          };
+          defineFetch(window);
+          if (window.constructor && window.constructor.prototype) {
+            defineFetch(window.constructor.prototype);
+          }
+          if (typeof Window !== 'undefined' && Window.prototype) {
+            defineFetch(Window.prototype);
+          }
+        } catch (err) {}
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#1c1917" />
+    <title>Jonglei Independent Political Alliance (JIPA) | Power to the People</title>
+    <meta name="description" content="Official website of the Jonglei Independent Political Alliance (JIPA) - Power to the People. Bringing together independent candidates, voters and supporters across all nine counties of Jonglei State, South Sudan." />
+    <meta property="og:title" content="Jonglei Independent Political Alliance (JIPA) | Power to the People" />
+    <meta property="og:description" content="Official website of the Jonglei Independent Political Alliance (JIPA) - Power to the People. Bringing together independent candidates, voters and supporters across all nine counties of Jonglei State, South Sudan." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23111' stroke='%23facc15' stroke-width='4'/><polygon points='50,15 53,24 62,24 55,29 57,38 50,33 43,38 45,29 38,24 47,24' fill='%23facc15'/><path d='M50 28 C42 42 40 55 50 64 C60 55 58 42 50 28 Z' fill='%23dc2626'/><path d='M50 36 C46 44 45 52 50 58 C55 52 54 44 50 36 Z' fill='%23facc15'/><rect x='46' y='64' width='8' height='16' fill='%23facc15'/><text x='50' y='90' font-size='10' font-weight='bold' text-anchor='middle' fill='%23facc15'>JIPA</text></svg>" />
+  </head>
+  <body class="bg-stone-50 text-stone-900 font-sans antialiased selection:bg-amber-400 selection:text-stone-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,6 @@
+{
+  "name": "Jonglei Independent Political Alliance (JIPA)",
+  "description": "Official website of the Jonglei Independent Political Alliance (JIPA) - Power to the People. Bringing together independent candidates, voters and supporters across all nine counties of Jonglei State, South Sudan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
