@@ -323,24 +323,6 @@ export const HomePage: React.FC = () => {
                 </div>
               ))}
             </div>
-
-            {/* Quick Action Box: Confidential Report */}
-            <div className="bg-gradient-to-br from-red-50 to-[#FFFDE7] border border-red-200/80 rounded-xl p-4 text-[#111111] space-y-2">
-              <div className="flex items-center gap-2 text-red-700 font-extrabold text-xs uppercase tracking-wider">
-                <ShieldAlert className="w-4 h-4" />
-                <span>Confidential Incident Desk</span>
-              </div>
-              <p className="text-xs text-[#444444] leading-relaxed">
-                Have you witnessed child abductions, attacks on civilians, or rights abuses? Report through our secure, encrypted channel.
-              </p>
-              <button
-                onClick={() => navigateTo('report')}
-                className="text-xs font-bold text-red-700 hover:text-red-800 underline flex items-center gap-1"
-              >
-                <span>Submit Confidential Report Securely</span>
-                <span>→</span>
-              </button>
-            </div>
           </div>
         </div>
       </section>
